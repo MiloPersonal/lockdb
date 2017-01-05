@@ -24,4 +24,18 @@ public class DBDemo {
         return dbService.lockdb();
     }
 
+
+
+
+    @RequestMapping("b")
+    public String lockdb2(){
+        return dbService.lockdb2();
+    }
+
+
+    @RequestMapping("c")
+    public String lockdb3(){
+        return dbService.lockdb3();
+    }
+
 }

@@ -80,12 +80,20 @@
     where id = #{id,jdbcType=VARCHAR}
   </update>
 
-  <select id="lockdb" resultMap="BaseResultMap" parameterType="java.lang.String" >
+  <select id="lockdb" resultMap="BaseResultMap" parameterType="java.lang.String">
     select
     <include refid="Base_Column_List" />
     from t_user
     where id = #{id,jdbcType=VARCHAR}
     for UPDATE
   </select>
+  <select id="lockdb2" resultMap="BaseResultMap" parameterType="java.lang.String" timeout="1">
+    select
+    <include refid="Base_Column_List" />
+    from t_user
+    where id = #{id,jdbcType=VARCHAR}
+    for UPDATE
+  </select>
+
 
 </mapper>

@@ -16,4 +16,6 @@ public interface TUserMapper {
     int updateByPrimaryKey(TUser record);
 
     TUser lockdb(String s);
+
+    TUser lockdb2(String s);
 }
